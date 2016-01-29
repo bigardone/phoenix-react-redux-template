@@ -25,7 +25,7 @@
     "react-gravatar": "^2.3.0",
     "react-page-click": "^2.0.0",
     "react-redux": "^4.1.1",
-    "react-router": "^1.0.3",
+    "react-router": "^2.0.0-rc5",
     "react-router-redux": "^2.1.0",
     "redux": "^3.1.2",
     "redux-logger": "^2.4.0",
