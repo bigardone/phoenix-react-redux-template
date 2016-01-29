@@ -21,3 +21,7 @@ To start your Phoenix app:
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 Happy coding!
+
+## License
+
+See [LICENSE](LICENSE).
