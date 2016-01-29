@@ -6,7 +6,7 @@ This is a template for new Phoenix single page applications with:
   - **Redux**
   - **React router**
   - **ES6/7**
-  - **Sass**
+  - **Sass** with **Bourbon**, **Neat** and **Bitters**
   - Authentication via **Guardian** and **jwt**
 
 **User** base migration and both **registration** and **authentication** controllers already implemented.
