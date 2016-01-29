@@ -2,11 +2,14 @@
 
 This is a template for new Phoenix single page applications with:
  
-  - React
-  - Redux
-  - React router
-  - ES6/7
-  - Sass
+  - **React**
+  - **Redux**
+  - **React router**
+  - **ES6/7**
+  - **Sass**
+  - Authentication via **Guardian** and **jwt**
+
+**User** base migration and both **registration** and **authentication** controllers already implemented.
 
 To start your Phoenix app:
 
