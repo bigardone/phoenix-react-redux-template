@@ -31,6 +31,9 @@
     "redux-logger": "^2.4.0",
     "redux-thunk": "^1.0.3",
     "sass-brunch": "^2.0.0",
+    "stylus-brunch": "^2.0.0",
+    "postcss-brunch": "^0.5.0",
+    "autoprefixer": "^5.1.0",    
     "uglify-js-brunch": "~1.7.0"
   }
 }
