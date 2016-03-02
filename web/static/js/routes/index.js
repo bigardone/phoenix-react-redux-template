@@ -5,14 +5,31 @@ import AuthenticatedContainer       from '../containers/authenticated';
 import HomeIndexView                from '../views/home';
 import RegistrationsNew             from '../views/registrations/new';
 import SessionsNew                  from '../views/sessions/new';
+import Actions                      from '../actions/sessions';
 
-export default (
-  <Route component={MainLayout}>
-    <Route path="/sign_up" component={RegistrationsNew} />
-    <Route path="/sign_in" component={SessionsNew} />
+export default function configRoutes(store) {
+  const _ensureAuthenticated = (nextState, replace, callback) => {
+    const { dispatch } = store;
+    const { session } = store.getState();
+    const { currentUser } = session;
 
-    <Route path="/" component={AuthenticatedContainer}>
-      <IndexRoute component={HomeIndexView} />
+    if (!currentUser && localStorage.getItem('phoenixAuthToken')) {
+      dispatch(Actions.currentUser());
+    } else if (!localStorage.getItem('phoenixAuthToken')) {
+      replace('/sign_in');
+    }
+
+    callback();
+  };
+
+  return (
+    <Route component={MainLayout}>
+      <Route path="/sign_up" component={RegistrationsNew} />
+      <Route path="/sign_in" component={SessionsNew} />
+
+      <Route path="/" component={AuthenticatedContainer} onEnter={_ensureAuthenticated}>
+        <IndexRoute component={HomeIndexView} />
+      </Route>
     </Route>
-  </Route>
-);
+  );
+}
