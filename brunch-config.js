@@ -88,7 +88,6 @@ exports.config = {
       'react-addons-css-transition-group',
       'react-dom',
       'react-gravatar',
-      'react-page-click',
       'react-redux',
       'react-router',
       'react-router-redux',
