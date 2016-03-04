@@ -59,6 +59,10 @@ exports.config = {
       options: {
         includePaths: ['node_modules'],
       },
+      // See https://github.com/brunch/stylus-brunch
+      stylus: {
+        includeCss: true
+      }
     },
   },
 
