@@ -7,14 +7,9 @@ import { routeActions } from 'react-router-redux';
 import SessionActions   from '../actions/sessions';
 import HeaderActions    from '../actions/header';
 
-class Header extends React.Component {
+export default class Header extends React.Component {
   _renderCurrentUser() {
     const { currentUser } = this.props;
-
-    if (!currentUser) {
-      return false;
-    }
-
     const fullName = [currentUser.first_name, currentUser.last_name].join(' ');
 
     return (
@@ -62,9 +57,3 @@ class Header extends React.Component {
     );
   }
 }
-
-const mapStateToProps = (state) => (
-  state.session
-);
-
-export default connect(mapStateToProps)(Header);
