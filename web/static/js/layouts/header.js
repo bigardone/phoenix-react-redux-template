@@ -2,7 +2,7 @@ import React            from 'react';
 import { connect }      from 'react-redux';
 import { Link }         from 'react-router';
 import ReactGravatar    from 'react-gravatar';
-import { routeActions } from 'react-router-redux';
+import { push}          from 'react-router-redux';
 
 import SessionActions   from '../actions/sessions';
 import HeaderActions    from '../actions/header';
